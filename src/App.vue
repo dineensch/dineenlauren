@@ -1,12 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <vert-nav id="vertNav"></vert-nav>
+    <nav-bar></nav-bar>
+    <Hero></Hero>
+    <router-view/>
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import VertNav from "@/components/VertNav.vue";
+import Hero from "@/components/Hero.vue";
+import NavBar from "@/components/NavBar.vue";
+
+export default {
+  name: "home",
+  components: {
+    Hero,
+    NavBar,
+    VertNav
+  }
+};
+</script>
+
 
 <style>
 #app {
