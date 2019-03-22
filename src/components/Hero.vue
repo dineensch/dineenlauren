@@ -1,15 +1,19 @@
 <template>
-	<b-jumbotron class="m-0 py-5">
-		<h5>
-			Dineen
-			<span id="dineen">Lauren</span>
-		</h5>
-	</b-jumbotron>
-
-	<!-- <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-	<div class="bg-circle-4 bg-circle"></div>-->
+	<div>
+		<b-jumbotron class="m-0 py-5">
+			<h5>
+				Dineen
+				<span id="dineen">Lauren</span>
+			</h5>
+		</b-jumbotron>
+		<div>
+			<b-nav tabs class="d-flex justify-content-end mb-2">
+				<b-nav-item active href="#/">About</b-nav-item>
+				<b-nav-item href="#/projects">Projects</b-nav-item>
+				<b-nav-item href="#/about">Contact</b-nav-item>
+			</b-nav>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -49,6 +53,10 @@ li {
 	margin: 0 10px;
 }
 a {
-	color: white;
+	color: rgb(48, 48, 48);
+}
+.nav-link {
+	text-align: right;
+	padding: 0;
 }
 </style>

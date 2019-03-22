@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<b-nav vertical class="text-center">
+		<b-nav vertical class="text-center vertList">
 			<b-nav-item active>
 				<font-awesome-icon :icon="['fab', 'github']"/>
 			</b-nav-item>
@@ -34,6 +34,9 @@ div#vertNav {
 	padding-top: 10rem;
 }
 
+.vertList {
+	margin-top: 3rem;
+}
 .nav-link {
 	padding-left: 0.2rem;
 	padding-right: 0.2rem;
@@ -44,7 +47,7 @@ div#vertNav {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 	div#vertNav {
-		z-index: 0;
+		z-index: 100;
 	}
 }
 

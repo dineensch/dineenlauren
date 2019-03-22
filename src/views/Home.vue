@@ -69,44 +69,6 @@
 				</b-col>
 			</b-row>
 		</b-container>
-		<b-container>
-			<div id="flip">
-				<transition name="card" mode="out-in">
-					<!-- FRONT OF CARD -->
-					<div class="card" id="card1" v-if="front == true" key="flip">
-						<b-button class="btn-flip" @click="front = false">
-							<div class="card-content">
-								<b-img
-									rounded="circle"
-									src="https://picsum.photos/300/300/?image=41"
-									alt="image"
-									fluid
-									class="mb-3"
-								/>
-								<h3>Jane Doe</h3>
-								<span>View More</span>
-							</div>
-						</b-button>
-					</div>
-					<!-- BACK OF CARD -->
-					<div class="card" id="card1back" v-else target="card1">
-						<b-button class="btn-flip" @click="front = true">
-							<div class="card-content">
-								<b-img
-									rounded="circle"
-									src="https://picsum.photos/300/300/?image=41"
-									alt="image"
-									fluid
-									class="mb-3"
-								/>
-								<h3>Back</h3>
-								<span>View More</span>
-							</div>
-						</b-button>
-					</div>
-				</transition>
-			</div>
-		</b-container>
 	</div>
 </template>
 
