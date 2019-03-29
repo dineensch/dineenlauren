@@ -23,9 +23,9 @@
 		</b-container>
 		<b-container>
 			<b-row align-h="end" class="mr-1">
-				<b-col cols="9" class="p-1">
-					<b-row align-h="center">
-						<b-col order="1" class="p-1">
+				<b-col cols="9" md="12" class="p-1">
+					<b-row align-h="center" class="ml-5">
+						<b-col md="12" order="1" class="p-1">
 							<h2 class="mb-0">What</h2>
 							<hr class="my-1 mx-3">
 							<p>
@@ -33,7 +33,7 @@
 								<br>UX, UI and Front-End Development as well as an instinct for streamlining processes to promote efficiency.
 							</p>
 						</b-col>
-						<b-col class="p-0" align-self="end">
+						<b-col md="12" class="p-0" align-self="start">
 							<div class="circle circle-drk rounded-circle">
 								<p class="m-0 py-2">JS</p>
 							</div>
@@ -73,6 +73,17 @@
 </template>
 
 <script>
+export default {
+	data() {
+		return {
+			boxes: [
+				{
+					isShowing: false
+				}
+			]
+		};
+	}
+};
 </script>
 
 <style scoped>

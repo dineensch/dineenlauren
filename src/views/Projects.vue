@@ -2,14 +2,14 @@
 	<div class="projects">
 		<b-container fluid class="mt-3">
 			<b-row align-h="end">
-				<b-col cols="10" md="4" v-for="(box, index) in boxes" :key="box.id" @click="toggleShow(index)">
+				<b-col cols="10" md="3" v-for="(box, index) in boxes" :key="box.id" @click="toggleShow(index)">
 					<div class="box">
-						<!-- VISIBILE BOX -->
 						<div class="img-contain">
 							<b-img v-bind:src="box.image" fluid-grow alt="Responsive image"/>
-							<div class="overlay">
-								<p class="overlay-text">View More</p>
+							<div class="overlay py-5">
+								<b-button class="overlay-text mt-4 py-0">View</b-button>
 							</div>
+
 							<transition name="fade">
 								<div class="shade" v-if="box.isShowing">
 									<div class="shade-content">
@@ -138,7 +138,6 @@ img {
 	width: 100%;
 	height: 100%;
 	border: 1px solid #fff;
-	padding: 4rem 1rem;
 	border-radius: 0.25rem;
 	color: white;
 }
@@ -149,8 +148,10 @@ img {
 }
 p {
 	font-family: brandon-grotesque, sans-serif;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 100;
+	line-height: 1.3;
+	margin-bottom: 0.25rems !important;
 }
 
 h3 {
@@ -161,27 +162,23 @@ h3 {
 .overlay {
 	width: 100%;
 	height: 100%;
-	opacity: 0;
+	opacity: 1;
+	background: #0707077a;
 	border-radius: 0.25rem;
 	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
-	color: white;
 	cursor: pointer;
 }
 
 .overlay-text {
-	padding-top: 10rem;
-	font-size: 2rem;
-	font-weight: 300;
-}
-.overlay:hover {
-	opacity: 1;
-	border-radius: 0.25rem;
-	background: #07070773;
-	transition: 0.3s opacity ease-out;
-	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: 400;
+	width: 100%;
+	color: white;
+	border: 1px solid white;
+	background: #633637bb;
 }
 
 .img-contain {
@@ -197,4 +194,43 @@ h3 {
 .fade-leave-to {
 	opacity: 0;
 }
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 425.98px) {
+	.overlay {
+		opacity: 0;
+	}
+
+	.overlay:hover {
+		opacity: 1;
+		border-radius: 0.25rem;
+		background: #07070773;
+		transition: 0.3s opacity ease-out;
+		cursor: pointer;
+	}
+
+	.overlay-text {
+		padding-top: 10rem;
+		font-size: 2rem;
+		font-weight: 300;
+	}
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
 </style>
+
+
